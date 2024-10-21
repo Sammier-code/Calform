@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalForm</title>
+    <link rel="icon" href="images/calogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="images/calogo.png" alt="calformlogo" class="logo">
+            <h1>CalForm</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li></ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="buttons-section">
+            <button onclick="showFormula('Difference of Squares', 'a^2 - b^2 = (a - b)(a + b)', ['a', 'b'])"> Difference of Squares </button><hr>
+            <button onclick="showFormula('Square of a Binomial (Sum)', '(a + b)^2 = a^2 + 2ab + b^2', ['a', 'b'])">Square of a Binomial (Sum)</button><hr>
+            <button onclick="showFormula('Sum of Squares', 'a^2 + b^2 = (a + b)^2 - 2ab', ['a', 'b'])">Sum of Squares</button><hr>
+            <button onclick="showFormula('Square of a Binomial (Difference)', '(a - b)^2 = a^2 - 2ab + b^2', ['a', 'b'])">Square of a Binomial (Difference)</button><hr>
+            <button onclick="showFormula('Square of a Trinomial (Sum)', '(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca', ['a', 'b', 'c'])">Square of a Trinomial (Sum)</button><hr>
+            <button onclick="showFormula('Square of a Trinomial (Mixed Signs)', '(a - b - c)^2 = a^2 + b^2 + c^2 - 2ab + 2bc - 2ca', ['a', 'b', 'c'])">Square of a Trinomial (Mixed Signs)</button><hr>
+            <button onclick="showFormula('Cube of a Binomial (Sum)', '(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3', ['a', 'b'])">Cube of a Binomial (Sum)</button><hr>
+            <button onclick="showFormula('Alternate Cube of a Binomial (Sum)', '(a + b)^3 = a^3 + b^3 + 3ab(a + b)', ['a', 'b'])">Alternate Cube of a Binomial (Sum)</button><hr>
+            <button onclick="showFormula('Cube of a Binomial (Difference)', '(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3', ['a', 'b'])">Cube of a Binomial (Difference)</button><hr>
+            <button onclick="showFormula('Alternate Cube of a Binomial (Difference)', '(a - b)^3 = a^3 - b^3 - 3ab(a - b)', ['a', 'b'])">Alternate Cube of a Binomial (Difference)</button><hr>
+            <button onclick="showFormula('Difference of Cubes', 'a^3 - b^3 = (a - b)(a^2 + ab + b^2)', ['a', 'b'])">Difference of Cubes</button><hr>
+            <button onclick="showFormula('Sum of Cubes', 'a^3 + b^3 = (a + b)(a^2 - ab + b^2)', ['a', 'b'])">Sum of Cubes</button><hr>
+            <button onclick="showFormula('Fourth Power of a Binomial (Sum)', '(a + b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4', ['a', 'b'])">Fourth Power of a Binomial (Sum)</button><hr>
+            <button onclick="showFormula('Fourth Power of a Binomial (Difference)', '(a - b)^4 = a^4 - 4a^3b + 6a^2b^2 - 4ab^3 + b^4', ['a', 'b'])">Fourth Power of a Binomial (Difference)</button><hr>
+            <button onclick="showFormula('Difference of Fourth Powers', 'a^4 - b^4 = (a - b)(a + b)(a^2 + b^2)', ['a', 'b'])">Difference of Fourth Powers</button><hr>
+            <button onclick="showFormula('Difference of Fifth Powers', 'a^5 - b^5 = (a - b)(a^4 + a^3b + a^2b^2 + ab^3 + b^4)', ['a', 'b'])">Difference of Fifth Powers</button><hr>
+            <button onclick="showFormula('Square of a Polynomial (Sum)', '(a + b + c + \u2026)^2 = a^2 + b^2 + c^2 + \u2026 + 2(ab + ac + bc + \u2026)', ['a', 'b', 'c'])">Square of a Polynomial (Sum)</button><hr>
+            <button onclick="showFormula('Square of a Trinomial (x, y, z)', '(x + y + z)^2 = x^2 + y^2 + z^2 + 2xy + 2yz + 2xz', ['x', 'y', 'z'])">Square of a Trinomial (x, y, z)</button><hr>
+            <button onclick="showFormula('Square of a Trinomial (x, y, -z)', '(x + y - z)^2 = x^2 + y^2 + z^2 + 2xy - 2yz - 2xz', ['x', 'y', 'z'])">Square of a Trinomial (x, y, -z)</button><hr>
+            <button onclick="showFormula('Square of a Trinomial (-x, y, z)', '(x - y + z)^2 = x^2 + y^2 + z^2 - 2xy - 2yz + 2xz', ['x', 'y', 'z'])">Square of a Trinomial (-x, y, z)</button><hr>
+            <button onclick="showFormula('Square of a Trinomial (x, -y, -z)', '(x - y - z)^2 = x^2 + y^2 + z^2 - 2xy + 2yz - 2xz', ['x', 'y', 'z'])">Square of a Trinomial (x, -y, -z)</button><hr>
+            <button onclick="showFormula('Sum of Cubes (Three Variables)', 'x^3 + y^3 + z^3 - 3xyz = (x + y + z)(x^2 + y^2 + z^2 - xy - yz - xz)', ['x', 'y', 'z'])">Sum of Cubes (Three Variables)</button><hr>
+            <button onclick="showFormula('Sum of Squares of Two Variables', 'x^2 + y^2 = \u00bd[(x + y)^2 + (x - y)^2]', ['x', 'y'])">Sum of Squares of Two Variables</button><hr>
+            <button onclick="showFormula('Product of a Trinomial', '(x + a)(x + b)(x + c) = x^3 + (a + b + c)x^2 + (ab + bc + ca)x + abc', ['x', 'a', 'b', 'c'])">Product of a Trinomial</button><hr>
+            <button onclick="showFormula('Sum of Cubes (Two Variables)', 'x^3 + y^3 = (x + y)(x^2 - xy + y^2)', ['x', 'y'])">Sum of Cubes (Two Variables)</button><hr>
+            <button onclick="showFormula('Difference of Cubes (Two Variables)', 'x^3 - y^3 = (x - y)(x^2 + xy + y^2)', ['x', 'y'])">Difference of Cubes (Two Variables)</button><hr>
+            <button onclick="showFormula('Expression with Three Squares and Cross Products', 'x^2 + y^2 + z^2 - xy - yz - zx = \u00bd[(x - y)^2 + (y - z)^2 + (z - x)^2]', ['x', 'y', 'z'])">Expression with Three Squares and Cross Products</button><hr>
+        </div>
+        <div class="input-output-section">
+            <h2 id="formula-title">Formula Title</h2>
+            <p id="formula-output">Click on any formula button to see the corresponding formula here.</p>
+            <div id="formula-inputs"></div>
+            <button id="calculate-btn" onclick="calculate()">Calculate</button>
+            <div id="result-output"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Simplify Your Calculations,<br>Transform Your Results.</h2>
+                <ul class="footer-links">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="contactus.html">Contact us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <p>"CalForm: Where precision meets simplicity."</p>
+                <ul class="contact-info">
+                    <li><a href="www.stechnologyz.com"><img src="images/icons8-browser-40.png" alt="Website"></a></li>
+                    <li>📧 mohammedyarub123@gmail.com</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61564992413966&mibextid=ZbWKwL"><img src="images/icons8-facebook-logo-48.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/stechs_officials?igsh=MWgwejJxcmtoZTdoNQ=="><img src="images/icons8-instagram-48.png" alt="Instagram"></a>
+                    <a href="https://pin.it/oRpcZrqNW"><img src="images/icons8-pinterest-logo-48.png" alt="Pinterest"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © CalForm 2024</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

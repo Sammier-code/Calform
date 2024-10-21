@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+/* Header */
+header {
+    background:linear-gradient(to right,  #e6e0e0 ,#6994f1);
+    padding: 20px 0;
+    color: #ffffff;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    margin-right: 20px;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main Content */
+.content-container {
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0f0f0f;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #4CAF50;
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right,  #e6e0e0 ,#6994f1);
+    color: #0e0d0d;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    flex-wrap: wrap;
+}
+
+.footer-left h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-right p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info li {
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.contact-info a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 1rem;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+}
